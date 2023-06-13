@@ -1,8 +1,7 @@
 import React, { useContext } from 'react';
 import { useSignOut } from 'react-firebase-hooks/auth';
-import { auth } from '../../firebase';
 import { Link } from 'react-router-dom';
-import { FirebaseAuthContext } from '../../contexts/FirebaseAuthContext';
+import { FirebaseAuthContext, auth } from '../../contexts/FirebaseAuthContext';
 
 const NavBar = () => {
 	const [signOut] = useSignOut(auth);
@@ -16,7 +15,7 @@ const NavBar = () => {
 			<Link to="/">
 				<p>Home</p>
 			</Link>
-			{auth.currentUser ? (
+			{user ? (
 				<button onClick={() => userSignOut()}>Logout</button>
 			) : (
 				<Link to="/login">

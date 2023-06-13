@@ -37,4 +37,4 @@ const FirebaseAuthContextProvider: React.FC<{ children: React.ReactNode }> = ({ 
 	return <FirebaseAuthContext.Provider value={initialContext}>{children}</FirebaseAuthContext.Provider>;
 };
 
-export { FirebaseAuthContext, FirebaseAuthContextProvider };
+export { FirebaseAuthContext, FirebaseAuthContextProvider, auth };

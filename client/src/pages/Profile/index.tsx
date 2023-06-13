@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth } from '../../firebase';
+import React, { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FirebaseAuthContext } from '../../contexts/FirebaseAuthContext';
 
 const Profile = () => {
-	const [user, loading] = useAuthState(auth);
+	const { user, loading } = useContext(FirebaseAuthContext);
 	const navigate = useNavigate();
 
 	useEffect(() => {
