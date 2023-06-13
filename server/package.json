@@ -1,0 +1,14 @@
+{
+  "name": "qr-menu-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init": "cd terraform && terraform init",
+    "plan": "cd terraform && terraform plan",
+    "apply": "cd terraform && terraform apply -var-file=secret.tfvars",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
