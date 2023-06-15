@@ -1,5 +1,4 @@
 import React from 'react';
-import 'normalize.css';
 import { Route, Routes } from 'react-router-dom';
 import Login from './pages/Login';
 import Home from './pages/Home';

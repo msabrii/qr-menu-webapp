@@ -3,11 +3,7 @@ import { FirebaseAuthContext } from '../../contexts/FirebaseAuthContext';
 import { FirebaseFirestoreContext } from '../../contexts/FirebaseFireStoreContext';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-
-interface MenuType {
-	name: string;
-	userID: string;
-}
+import { MenuType } from '../../types';
 
 const Home = () => {
 	const { user } = useContext(FirebaseAuthContext);
