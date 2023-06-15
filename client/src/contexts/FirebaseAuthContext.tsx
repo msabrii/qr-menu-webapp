@@ -30,9 +30,9 @@ const FirebaseAuthContextProvider: React.FC<{ children: React.ReactNode }> = ({ 
 	const [user, loading, error] = useAuthState(auth);
 	const initialContext = { user, loading, error, signInWithGoogle };
 
-	useEffect(() => {
-		console.log(loading, 'USER');
-	}, [loading]);
+	// useEffect(() => {
+	// 	console.log(loading, 'USER');
+	// }, [loading]);
 
 	return <FirebaseAuthContext.Provider value={initialContext}>{children}</FirebaseAuthContext.Provider>;
 };
